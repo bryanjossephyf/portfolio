@@ -6,5 +6,5 @@ export default defineConfig({
   integrations: [tailwind()],
   //
   site: 'https://bryanjossephyf.github.io',
-  base: '/mi-repo',    
+  base: '/portfolio/',    
 });
