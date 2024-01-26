@@ -1,0 +1,17 @@
+---
+interface Props{
+    src: string,
+    p: string
+}
+
+const {src, p } = Astro.props
+---
+
+<section class="w-full grid auto-rows-[192px] grid-cols-6 gap-4">
+    <div class="row-span-2 col-span-6 rounded-3xl bg-white relative flex flex-col overflow-hidden gap-10 justify-end p-6 xl:col-span-4 lg:items-end sm:flex-row  lg:p-10">
+        <img src={src} alt="Hero image" class="absolute w-full h-full object-cover left-0 top-0">
+    </div>
+    <div class="row-span-1 col-span-6 rounded-3xl bg-white relative flex flex-col overflow-hidden gap-2 p-7  xl:col-span-2 lg:p-10 opacity-70">{p}</div>
+    <div class="row-span-1 col-span-3 rounded-3xl bg-white relative flex flex-col overflow-hidden  gap-2 items-center justify-center  xl:col-span-1">1</div>
+    <div class="row-span-1 col-span-3 rounded-3xl bg-white  overflow-hidden   xl:col-span-1 flex items-center justify-center relative">2</div>
+</section>

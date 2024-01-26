@@ -1,0 +1,39 @@
+---
+import Hero from "../components/Hero.astro";
+import Navbar from "../components/Navbar.astro";
+import Proyects from "../components/proyects/Proyects.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Home</title>
+  </head>
+  <body
+    class="w-full flex flex-col items-center subpixel-antialiased scroll-smooth gap-5 lg:gap-10 mb-10 bg-gray-100"
+  >
+    <Navbar />
+    <main
+      class="w-full flex flex-col gap-10 items-center max-w-5xl px-5 xl:max-w-7xl mt-[5.5rem]"
+    >
+      <!--Componets --------------------------->
+      <Hero
+        src="https://cdn.buttercms.com/xrVbfdR5TBy4iTaY4xl7"
+        p="hola mundo hola mundo hola mundo hola mundo hola mundo hola mundo "
+      />
+      <!--------------------------------------->
+      <Proyects />
+    </main>
+    <Footer></Footer>
+  </body>
+</html>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
