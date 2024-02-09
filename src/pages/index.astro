@@ -1,7 +1,10 @@
 ---
+import "../style/customStyle.css"
 import Sliderbar from "../components/slidrbar/Sliderbar.astro"
 import Home from "../components/home/Home.astro"
 import About from "../components/about/About.astro"
+import Portfolio from "../components/portfolio/Portfolio.jsx"
+import Blog from "../components/blog/Blog.astro"
 ---
 
 <html lang="es">
@@ -10,6 +13,8 @@ import About from "../components/about/About.astro"
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <!--simple line icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
     <title>Home</title>
   </head>
   <body>
@@ -17,13 +22,17 @@ import About from "../components/about/About.astro"
     <main>
       <Home/>
       <About/>
+      <Portfolio client:visible/>
+      <Blog/>
     </main>
+    <!--font-awesome -->
+    <script src="https://kit.fontawesome.com/9a9c4ed2e5.js" crossorigin="anonymous"></script>
   </body>
 </html>
 
 <style>
-  html {
-    scroll-behavior: smooth;
-    font-family: 'Outfit', sans-serif;
+  main{
+    margin-left: 110px;
   }
+
 </style>

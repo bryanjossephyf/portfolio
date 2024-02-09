@@ -1,1 +1,141 @@
-<h2>abot<h2>
+---
+import { Image } from "astro:assets";
+import Me2 from "../../../assets/avatar-2.svg";
+---
+
+<section class="about container section" id="about">
+  <h2 class="section__title">About me</h2>
+  <div class="about__container grid">
+    <Image src={Me2} alt="avatar2"  class="about__img"/>
+    <div class="about__data grid">
+      <div class="about__info">
+        <p class="about__description">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non quod
+          nisi quis cupiditate nostrum sunt consequatur blanditiis
+          necessitatibus inventore? Nulla nisi nobis iusto animi autem dolorem
+          porro reprehenderit quia aut!
+        </p>
+
+        <a href="" class="btn">Download CV</a>
+      </div>
+
+      <div class="about__skills grid">
+        <div class="skills__data">
+          <div class="skills__titles">
+            <h3 class="skills__name">Marketing</h3>
+            <span class="skills__number">2025</span>
+          </div>
+          <div class="skills__bar">
+            <span class="skills__percentage"></span>
+          </div>
+        </div>
+
+        <div class="skills__data">
+          <div class="skills__titles">
+            <h3 class="skills__name">Marketing</h3>
+            <span class="skills__number">2025</span>
+          </div>
+          <div class="skills__bar">
+            <span class="skills__percentage"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about__container {
+    grid-template-columns: 3fr 9fr;
+    column-gap: 1.875rem;
+  }
+
+  .about__data {
+    padding: 1.875rem;
+    background-color: var(--container-color);
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius);
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.875rem;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  .about__data::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 15px solid var(--container-color);
+    position: absolute;
+    left: -0.93rem;
+    top: 20%;
+  }
+
+  .about__description {
+    margin-bottom: 1rem;
+    text-align: justify;
+  }
+
+  .about__skills {
+    row-gap: 1.25rem;
+    margin: auto 0;
+  }
+
+  .slkills__titles {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  .skills__name {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+  }
+
+  .skills__number {
+    line-height: 1.2;
+  }
+
+  .skills__bar,
+  .skills__percentage {
+    height: 7px;
+    border-radius: 0.25rem;
+  }
+
+  .skills__bar {
+    background-color: #f1f1f1;
+  }
+
+  .skills__percentage {
+    display: block;
+  }
+
+  /*================BREAKEPOINTS===============*/
+  /*LG*/
+  @media screen and (max-width: 1024px) {
+    .about__container {
+        grid-template-columns: 720px;
+        justify-content: center;
+        row-gap: 1.875rem;
+    }
+
+    .about__data::before { 
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10ox solid #fff;
+        left: 49%;
+        top: -20px;
+    }
+
+    .about__img{
+        justify-self: center;
+    }
+
+    .about__box{
+        flex-direction: column;
+        row-gap: 1.5rem;
+    }
+  }
+</style>

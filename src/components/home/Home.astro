@@ -1,6 +1,43 @@
 ---
-
+import { Image } from "astro:assets";
+import ME from "../../../assets/avatar-1.svg";
+import HeaderSocials from "../home/HeaderSocials.astro";
 ---
 
+<section class="home container" id="home">
+  <div class="intro">
+    <Image src={ME} alt="avatar" class="home__img" />
+    <h1 class="home__name">Hola...!</h1>
+    <span class="home__education">Soy Bryan, un estudiante de marketing</span>
+    <HeaderSocials />
 
-<h1>home</h1>
+    <a href="#contact" class="btn">herer me</a>
+  </div>
+
+</section>
+
+<style>
+  .home {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .intro {
+    max-width: 540px;
+    text-align: center;
+  }
+
+  .home__img {
+    margin-bottom: 1.5rem;
+  }
+
+  .home__name {
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-bold);
+    margin-bottom: 0.5rem;
+  }
+
+</style>

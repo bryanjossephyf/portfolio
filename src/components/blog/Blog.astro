@@ -1,0 +1,122 @@
+---
+import { Image } from "astro:assets"
+import Image1 from "../../../assets/blog-1.svg"
+import Image2 from "../../../assets/blog-2.svg"
+import Image3 from "../../../assets/blog-3.svg"
+
+---
+
+<section class="blog container section" id="blog">
+    <h2 class="section__title">Post</h2>
+
+    <div class="blog__container grid">
+        <div class="blog__card">
+            <div class="blog__thumb">
+                <span class="blog__category">Reviews</span>
+                <a href=""><Image src={Image1} alt="blog-image" class="blog__img"></Image> </a>
+            </div> 
+            <div class="blog__details">
+                <h3 class="blog__title"> 5 mejores lenguajes</h3>
+                <div class="blog__meta">
+                    <span>6/02/2024</span>
+                    <span class="blog__dot">.</span>
+                    <span>Bolvb</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="blog__card">
+            <div class="blog__thumb">
+                <span class="blog__category">Reviews</span>
+                <a href=""><Image src={Image1} alt="blog-image" class="blog__img"></Image> </a>
+            </div> 
+            <div class="blog__details">
+                <h3 class="blog__title"> 5 mejores lenguajes</h3>
+                <div class="blog__meta">
+                    <span>6/02/2024</span>
+                    <span class="blog__dot">.</span>
+                    <span>Bolvb</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="blog__card">
+            <div class="blog__thumb">
+                <span class="blog__category">Reviews</span>
+                <a href=""><Image src={Image1} alt="blog-image" class="blog__img"></Image> </a>
+            </div> 
+            <div class="blog__details">
+                <h3 class="blog__title"> 5 mejores lenguajes</h3>
+                <div class="blog__meta">
+                    <span>6/02/2024</span>
+                    <span class="blog__dot">.</span>
+                    <span>Bolvb</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .blog__container {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1.875rem;
+    }
+
+    .blog__card {
+        box-shadow: var(--shadow);
+        border-radius: var(--border-radius);
+        overflow: hidden;
+    }
+
+    .blog__thumb {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .blog__img {
+        transform: scale(1);
+        transition: .3s;
+    }
+
+    .blog__thumb:hover .blog__img {
+        transform: scale(1.1 );
+    }
+
+    .blog__category {
+        color: #fff;
+        background-color: var(--first-color);
+        border-bottom-left-radius: 0.9375rem;
+        border-bottom-right-radius: 0.9375rem;
+        position: absolute;
+        top: 0;
+        left: 1.25rem;
+        font-size: var(--small-font-size);
+        display: inline-block;
+        padding: 0.128rem 0.5rem;
+        transition: .3s;
+        z-index: 10;
+    }
+
+    .blog__details {
+        background-color: var(--container-color);
+        padding: 1.25rem;
+    }
+
+    .blog__title {
+        font-size: var(--h3-font-size);
+        margin-bottom: 0.5rem;
+    }
+
+    .blog__meta {
+        display: flex;
+        column-gap: 0.6rem;
+        font-size: var(--small-font-size);
+        color: #8b88b1;
+    }
+
+    .blog__dot {
+        font-weight: var(--font-bold);
+    }
+
+</style>

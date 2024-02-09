@@ -1,1 +1,123 @@
-<h1>slidebar</h1>
+---
+import { Image } from "astro:assets"
+import Logo from "../../../assets/logo.svg"
+---
+
+<aside class="aside">
+    <a href="#home" class="nav_logo">
+        <Image src={Logo} alt="logo"></Image>
+    </a>
+
+    <nav class="nav">
+        <div class="nav__menu">
+            <ul>
+                <li class="nav__item">
+                    <a href="#home" class="nav__link">
+                        <i class="icon-home"></i>
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="#about" class="nav__link">
+                        <i class="icon-user-following"></i>
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="#work" class="nav__link">
+                        <i class="icon-briefcase"></i>
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="#resume" class="nav__link">
+                        <i class="icon-graduation"></i>
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="#portfolio" class="nav__link">
+                        <i class="icon-layers"></i>
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="#blog" class="nav__link">
+                        <i class="icon-note"></i>
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="#contact" class="nav__link">
+                        <i class="icon-bubble"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="nav__footer"> 
+        <span class="copyright">:P</span>
+    </div>
+</aside>
+
+<style>
+   .aside {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: var(--body-color);
+    border-right: px solid rgba(0, 0, 0, 0.2);
+    padding: 2.5rem;
+    width: 110px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 10;
+   }
+
+   .nav__list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+   }
+
+   .nav__link {
+    font-size: 1.5rem;
+    color: var(--title-color);
+    font-weight: var(--font-bold);
+    transition: .3s;
+   }
+
+   .nav__link:hover {
+    color: hsl(0, 100%, 68%);
+   }
+
+   .copyright {
+    color: hsl(245, 15%, 65%);
+    font-size: var(--small-font-size);
+   }
+
+   /*================BREAKEPOINTS===============*/
+/*LG*/
+@media screen and (max-width: 1024px) {
+    .aside{
+        left: -110px;
+    }
+}
+
+/*md*/
+@media screen and (max-width: 768px) {
+    
+}
+
+@media screen and (max-width: 576px) {
+    
+}
+
+/*sm*/
+@media screen and (max-width: 350px) {
+    
+}
+</style>
