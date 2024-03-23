@@ -1,6 +1,4 @@
-## Astro portfolioweb
-
-https://youtu.be/9wdErl1gA4E?si=6ugdyGoLyFI1lQ13&t=849
+## Astro portfolioweb (no production)
 
 
     --first-color: hsl(353, 100% ,65%);
